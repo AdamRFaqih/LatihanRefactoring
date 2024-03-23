@@ -1,10 +1,11 @@
 package org.example;
 
-import java.util.PrimitiveIterator;
-
 public class Song {
-    private enum Genre{
+    public enum Genre{
         UNDEFINED, POP, ROCK, HIPHOP, RNB, JAZZ, INSTRUMENTALS, CLOWNCORE
+    }
+    public enum DetailLevel {
+        SONGONLY, SONGARTIST, SONGALBUM, SONGDETAIL
     }
     private String id;
     private String title;
@@ -29,17 +30,14 @@ public class Song {
     public void setGenre(Genre genre) {
         this.genre = genre;
     }
-    public void printInfo(int detailLevel) {
-
-        if (detailLevel >= 0 && detailLevel <= 3) {
-            System.out.println("song title: " + title);
-            System.out.println("release year: " + releaseYear);
-            if (this.genre != Genre.UNDEFINED) {
-                System.out.println("genre: " + genre);
-            }
+    public void printInfo(DetailLevel detailLevel) {
+        System.out.println("song title: " + title);
+        System.out.println("release year: " + releaseYear);
+        if (this.genre != Genre.UNDEFINED) {
+            System.out.println("genre: " + genre);
         }
 
-        if (detailLevel == 1 || detailLevel == 3) {
+        if (detailLevel == DetailLevel.SONGARTIST || detailLevel == DetailLevel.SONGDETAIL) {
             if (!artist.getName().equals("")) {
                 System.out.println("artist name: " + artist.getName());
             }
@@ -48,7 +46,7 @@ public class Song {
             }
         }
 
-        if (detailLevel == 2 || detailLevel == 3) {
+        if (detailLevel == DetailLevel.SONGALBUM || detailLevel == DetailLevel.SONGDETAIL) {
             if (!album.getName().equals("")) {
                 System.out.println("album title: " + album.getName());
             }
