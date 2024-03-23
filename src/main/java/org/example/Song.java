@@ -38,18 +38,11 @@ public class Song {
         }
 
         if (detailLevel == DetailLevel.SONGARTIST || detailLevel == DetailLevel.SONGDETAIL) {
-            if (!artist.getName().equals("")) {
-                System.out.println("artist name: " + artist.getName());
-            }
-            if (!artist.getAlias().equals("")) {
-                System.out.println("artist also known as: " + artist.getAlias());
-            }
+            artist.printInfo();
         }
 
         if (detailLevel == DetailLevel.SONGALBUM || detailLevel == DetailLevel.SONGDETAIL) {
-            if (!album.getName().equals("")) {
-                System.out.println("album title: " + album.getName());
-            }
+            album.printInfo();
         }
     }
 }

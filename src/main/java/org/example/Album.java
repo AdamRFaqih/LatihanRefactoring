@@ -24,4 +24,10 @@ public class Album {
     public void setCoverURL(String coverURL) {
         this.coverURL = coverURL;
     }
+
+    public void printInfo() {
+        if (!name.equals("")) {
+            System.out.println("album title: " + name);
+        }
+    }
 }

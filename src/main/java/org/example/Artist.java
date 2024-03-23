@@ -34,4 +34,13 @@ public class Artist {
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
     }
+
+    public void printInfo() {
+        if (!name.equals("")) {
+            System.out.println("artist name: " + name);
+        }
+        if (!alias.equals("")) {
+            System.out.println("artist also known as: " + alias);
+        }
+    }
 }
