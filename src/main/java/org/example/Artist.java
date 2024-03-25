@@ -15,24 +15,12 @@ public class Artist {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getAlias() {
         return alias;
     }
-
-    public void setAlias(String alias) {
-        this.alias = alias;
-    }
-
+    
     public String getImageURL() {
         return imageURL;
-    }
-
-    public void setImageURL(String imageURL) {
-        this.imageURL = imageURL;
     }
 
     public void printInfo() {

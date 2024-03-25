@@ -13,16 +13,8 @@ public class Album {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getCoverURL() {
         return coverURL;
-    }
-
-    public void setCoverURL(String coverURL) {
-        this.coverURL = coverURL;
     }
 
     public void printInfo() {
